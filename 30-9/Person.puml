@@ -1,0 +1,31 @@
+@startuml
+class Person {
+    - String namsinh
+    - String hoten
+    + Person()
+    + Person(String, String)
+    + getNamsinh(): String
+    + setNamsinh(String)
+    + getHoten(): String
+    + setHoten(String)
+}
+
+class GiangVien extends Person {
+    - String khoa
+    + GiangVien()
+    + GiangVien(String, String, String)
+    + getKhoa(): String
+    + setKhoa(String)
+}
+
+class SinhVien extends Person {
+    - String mssv
+    + SinhVien()
+    + SinhVien(String, String, String)
+    + getMssv(): String
+    + setMssv(String)
+}
+
+Person <|-- GiangVien
+Person <|-- SinhVien
+@enduml
